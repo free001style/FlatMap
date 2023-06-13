@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/filter.css') }}" />
+    <title>Выбирайте</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='dove.png') }}" alt="logo" class="img-logo">
+        </div>
+        <nav id="nav">
+            <ul id="nav-ul">
+                <li id="nav-li"><a href="/">
+                        <p id="nav-li-active">Главная</p>
+                    </a></li>
+                <!-- <li id="nav-li"><a href="#">
+                        <p>Лучшее</p>
+                    </a></li> -->
+                <li id="nav-li"><a href="saved_flats">
+                        <p>Сохраненное</p>
+                    </a></li>
+                <li id="nav-li"><a href="about_us">
+                        <p>О нас</p>
+                    </a></li>
+            </ul>
+        </nav>
+        <a href=login>
+            <button class="reg-btn">Регистрация</button>
+        </a>
+    </header>
+    <main>
+        <form class="form_container" action="/filters" method="POST">
+            <div class="form_container_item">
+                <h1 class="form_container_item-title">Сколько комнат: </h1>
+                <div class="form_container_item-rooms">
+                    <input type="checkbox" name="one_room" id="one_room">
+                    <label for="one_room">
+                        <h1 class="glowing-btn" id="label_one_room">1</h1>
+                    </label>
+                    <input type="checkbox" name="two_room" id="two_room">
+                    <label for="two_room">
+                        <h1 class="glowing-btn" id="label_two_room">2</h1>
+                    </label>
+                    <input type="checkbox" name="three_room" id="three_room">
+                    <label for="three_room">
+                        <h1 class="glowing-btn" id="label_three_room">3</h1>
+                    </label>
+                    <input type="checkbox" name="four_room" id="four_room">
+                    <label for="four_room">
+                        <h1 class="glowing-btn" id="label_four_room">4</h1>
+                    </label>
+                </div>
+            </div>
+            <div class="form_container_item">
+                <h1 class="form_container_item-title">Цена: </h1>
+                <div class="form_container_item-price">
+                    <input type="text" class="glowing-btn glow-form" name="min_price" placeholder="от" oninput="onchange(this.value)">
+                    <input type="text" class="glowing-btn glow-form" name="max_price" placeholder="до" oninput="onchange(this.value)">
+                </div>
+            </div>
+            <div class="form_container_item">
+                <h1 class="form_container_item-title">Где: </h1>
+                <div class="form_container_item-place">
+                    <input type="text" name="location" class="glowing-btn glow-form glow-form-search" placeholder="Город, район">
+                </div>
+            </div>
+            <button class="glowing-btn glow-btn" type="submit">ПОЕХАЛИ</button>
+        </form>
+    </main>
+</body>
+</html>
+
+<script>
+
+    var one_room = document.getElementById("one_room");
+    var label1 = document.getElementById("label_one_room");
+
+    var two_room = document.getElementById("two_room");
+    var label2 = document.getElementById("label_two_room");
+
+    var three_room = document.getElementById("three_room");
+    var label3 = document.getElementById("label_three_room");
+
+    var four_room = document.getElementById("four_room");
+    var label4 = document.getElementById("label_four_room");
+
+    one_room.addEventListener("click", function () {
+        label1.classList.toggle("clicked");
+    })
+
+    two_room.addEventListener("click", function () {
+        label2.classList.toggle("clicked");
+    })
+
+    three_room.addEventListener("click", function () {
+        label3.classList.toggle("clicked");
+    })
+
+    four_room.addEventListener("click", function () {
+        label4.classList.toggle("clicked");
+    })
+
+    const keyBox = document.querySelector(".glow-form");
+    function onchange(e) {
+        {#var val = e.value.trim();#}
+        return e.value.toLocaleString("ru-RU");
+    }
+
+    keyBox.oninput = () => {
+        {#input.value = '';#}
+        keyBox.toLocaleString("ru-RU");
+    }
+
+    {#keyBox.addEventListener("change", onchange);#}
+
+
+</script>

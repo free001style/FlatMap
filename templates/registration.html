@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/reg.css') }}"/>
+    <title>Авторизация</title>
+</head>
+
+<body>
+<header>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='dove.png') }}" alt="logo" class="img-logo">
+    </div>
+    <nav id="nav">
+        <ul id="nav-ul">
+            <li id="nav-li"><a href="/">
+                <p id="nav-li-active">Главная</p>
+            </a></li>
+            <!-- <li id="nav-li"><a href="#">
+                <p>Лучшее</p>
+            </a></li> -->
+            <li id="nav-li"><a href="/saved_flats">
+                <p>Сохраненное</p>
+            </a></li>
+            <li id="nav-li"><a href="about_us">
+                <p>О нас</p>
+            </a></li>
+        </ul>
+    </nav>
+    {##}
+    {#        Регистрация #}
+    {#        <div class="registration">#}
+    {#            <button class="reg-btn" id="open_registration">Регистрация</button>#}
+    {#        </div>#}
+
+    {#        Конец регистрации #}
+</header>
+
+<div class="login_box">
+    <div class="inner-box">
+        <div class="left">
+            <h2> Добро пожаловать! </h2>
+            <h4> Авторизируйтесь с Google аккаунтом </h4>
+            {% if session %}
+                <a class="link" href=logout>
+                    <button class="google">
+                        <img src="../static/google-icon.png" alt="google icon" class="google-img">
+                        <h4 class="text-btn">
+                            &nbsp; &nbsp; &nbsp; &nbsp;
+                            Выйти
+                            &nbsp; &nbsp; &nbsp; &nbsp; </h4>
+                    </button>
+                </a>
+            {% else %}
+                <a class="link" href=google-login>
+                    <button class="google">
+                        <img src="../static/google-icon.png" alt="google icon" class="google-img">
+                        <h4 class="text-btn">
+                            Войти с Google
+                        </h4>
+                    </button>
+                </a>
+            {% endif %}
+        </div>
+        <div class="right">
+            <img src="../static/our_flat.jpg" alt="flat" class="image">
+        </div>
+    </div>
+    {#        <button class="login_close-btn" id="close_registration">#}
+    {#            <svg width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg">#}
+    {#                <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"#}
+    {#                      fill="#333333" />#}
+    {#                <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z" fill="#333333" />#}
+    {#            </svg>#}
+    {#        </button>#}
+</div>
+
+
+</body>
+
+</html>

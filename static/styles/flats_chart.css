@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 6rem;
+  margin-top: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.img-logo {
+  width: 100px;
+}
+
+.logo {
+  flex: 1;
+}
+
+#nav {
+  flex: 6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+#nav-ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+#nav-li {
+  margin: 0 25px;
+  letter-spacing: 1px;
+}
+
+#nav-li-active {
+  font-weight: bold;
+}
+
+#nav-li a {
+  color: white;
+  text-decoration: none;
+}
+
+#nav-li a:hover {
+  color: yellow;
+}
+
+.registration {
+  border: solid white 2px;
+  border-radius: 40px;
+  padding: 1rem;
+}
+
+.main_title {
+  font-size: 4rem;
+}
+
+.main_block {
+  backdrop-filter: blur(10px);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 70px;
+  /* border-left: .5px solid rgba(255, 255, 255, 0.175);
+  border-right: .5px solid rgba(255, 255, 255, 0.267); */
+}
+
+.flat_card {
+  border-radius: 30px;
+  backdrop-filter: blur(14px);
+  padding: 10px;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  padding: 0.4em;
+  box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 2rem hsl(19, 100%, 69%),
+    0 0 0.8rem hsl(19, 100%, 69%),
+    0 0 2.8rem hsl(19, 100%, 69%),
+    inset 0 0 1.3rem hsl(19, 100%, 69%);
+
+}
+
+
+@keyframes pulsate {
+
+  100% {
+
+    text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #bc13fe,
+      0 0 80px #bc13fe,
+      0 0 90px #bc13fe,
+      0 0 100px #bc13fe,
+      0 0 150px #bc13fe;
+
+  }
+
+  0% {
+
+    text-shadow:
+      0 0 2px #fff,
+      0 0 4px #fff,
+      0 0 6px #fff,
+      0 0 10px #bc13fe,
+      0 0 45px #bc13fe,
+      0 0 55px #bc13fe,
+      0 0 70px #bc13fe,
+      0 0 80px #bc13fe;
+  }
+}
+
+.flat_card_description {
+  margin-left: 3rem;
+  width: 35rem;
+}
+
+.flat_card a {
+  text-decoration: none;
+  color: white;
+}
+
+.flat_card img {
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  height: 300px;
+  border-radius: 20px;
+  margin-left: 1rem;
+}
+
+
+.like {
+  position: relative;
+  /*right: 3rem;*/
+  /*left: 6;*/
+  width: 200px;
+  /*color: white;*/
+  /*width: 5rem;*/
+  border-radius: 10px;
+  border-left-color: white;
+  margin-right: 0.1rem;
+  /*margin-left: 25rem;*/
+
+
+  /*padding-left: 80%;*/
+  /*padding-right: 10%;*/
+  height: 102%;
+  /*width: 15%;*/
+  border-width: 0 0 0 100px;
+  /*background-color: #6EB54E;*/
+}
+
+.heart_svg {
+  position: relative;
+  top: 35%;
+  margin-left: 20%;
+  cursor: pointer;
+  fill: white;
+}
+
+.heart_svg:hover {
+  fill: rgb(232, 98, 118);
+  stroke: rgb(232, 98, 118);
+}
+
+.heart_svg.clicked {
+  fill: rgb(232, 98, 118);
+}
+
+.reg-btn {
+  /*margin-top: 0.7rem;*/
+  position: relative;
+
+  /*color: var(--glow-color);*/
+  cursor: pointer;
+  padding: 0.15em 0.25em;
+  /*border: 0.05em solid var(--glow-color);*/
+  /*border-radius: 0.45em;*/
+  background: none;
+  /*!*perspective: 0.15em;*!*/
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4em;
+  font-weight: 500;
+  /*letter-spacing: 0.2em;*/
+  color: #ffffff;
+
+  border: solid white 2px;
+  border-radius: 40px;
+  padding: 1rem;
+}
+
+.reg-btn {
+  position: relative;
+  cursor: pointer;
+  background: none;
+  /*!*perspective: 0.15em;*!*/
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #ffffff;
+
+  border: solid white 2px;
+  border-radius: 40px;
+  padding: 1rem;
+}

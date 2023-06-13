@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/aboutus.css') }}"/>
+    <title>Flatmap</title>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='dove.png') }}" alt="logo" class="img-logo">
+    </div>
+    <nav id="nav">
+        <ul id="nav-ul">
+            <li id="nav-li"><a href="/">
+                <p id="nav-li-active">Главная</p>
+            </a></li>
+            <!-- <li id="nav-li"><a href="#">
+                <p>Лучшее</p>
+            </a></li> -->
+            <li id="nav-li"><a href="saved_flats">
+                <p>Сохраненное</p>
+            </a></li>
+            <li id="nav-li"><a href="about_us">
+                <p>О нас</p>
+            </a></li>
+        </ul>
+    </nav>
+        <a href=login>
+        <button class="reg-btn">Регистрация</button>
+    </a>
+
+</header>
+<main>
+
+    <div class="aboutus">
+        <h2>TEAM</h2><br>
+        <img class="aboutus-img"
+             src="{{ url_for('static', filename='HSEconcert.png') }}"
+             alt="HSE">
+        <div class="box">
+            <div class="text">
+                <p><br><br>К созданию этого сайта приложили руку студенты &ensp;<br>
+                    второго курса Высшей Школы Экономики<br>
+                    факультета Компьютерных Наук, направления<br>
+                    Прикладная Математика и Информатика.<br>
+                    Они очень старались сделать так,<br>
+                    чтобы Вам было удобно<br>
+                    и приятно выбирать квартиру мечты;)</p>
+                <br><br><br><br>
+                <p>
+                    Вот они слева направо:<br>
+                    Фред, Дафни, Велма и Шеги</p>
+                <br><br><br><br><br>
+
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+

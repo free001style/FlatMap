@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="vXSwYKrW3EWTLo218kSkhZPEEd8nfpYvDs_uWoMyxds" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}" />
+    <title>Flatmap</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='dove.png') }}" alt="logo" class="img-logo">
+        </div>
+        <nav id="nav">
+            <ul id="nav-ul">
+                <li id="nav-li"><a href="/">
+                        <p id="nav-li-active">Главная</p>
+                    </a></li>
+                <!-- <li id="nav-li"><a href="#">
+                        <p>Лучшее</p>
+                    </a></li> -->
+                <li id="nav-li"><a href="saved_flats">
+                        <p>Сохраненное</p>
+                    </a></li>
+                <li id="nav-li"><a href="about_us">
+                        <p>О нас</p>
+                    </a></li>
+            </ul>
+        </nav>
+        <a href=login>
+            <button class="reg-btn">Регистрация</button>
+        </a>    
+    </header>
+    <main>
+        <div class="title-container">
+            <h1 class="main-title">Самое наилучшее какао <br> в самом уютном и <br> приятном месте :)</h1>
+            <!-- <form class="title-container-submit_form" action="/" method="POST"> -->
+            <p class="title-container-submit_form-text">Выберите штуки которые подходят <br> именно вам и мы <br>
+                подберем самое лучшее <br> предложения на рынке</p>
+
+            <a href=filters>
+                <button class='glowing-btn'><span class='glowing-txt'>ТЫК</span></button>
+            </a>
+            <!-- </form> -->
+        </div>
+        <div class="image-container">
+            <img class="image-container-img"
+                src="../static/img.png"
+                alt="main">
+            <div class="info-block">
+                <div class="title">
+                    <h2>48K+</h2>
+                    <p>Квартир в аренду</p>
+                </div>
+                <div class="title">
+                    <h2>3 мин</h2>
+                    <p>Ваше первое сохранение</p>
+                </div>
+                <div class="title">
+                    <h2>10 🍪</h2>
+                    <p>Съедено мной сейчас</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- <main>
+        <form action="/" method="POST" name="test_form">
+            <div class="checkbox-wrapper-36">
+                <input id="toggle-36" type="checkbox" name="filter" value="flat">
+                <label for="toggle-36"></label>
+            </div>
+            <button id="btn" type="submit">
+                <p id="btnText">Искать</p>
+                <div class="checked">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                        <path fill="transparent" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path>
+                    </svg>
+                </div>
+            </button>
+        </form>
+    </main> -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>
+
+<script>
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     document.forms['test_form'].addEventListener('submit', function (e) {
+    //         e.preventDefault();
+    //         form = this;
+    //         // Make a new timeout set to go off in 1000ms (1 second)
+    //         setTimeout(function () {
+    //             // submit form after timeout
+    //             form.submit();
+    //         }, 1000);
+    //     });
+    // });
+</script>
